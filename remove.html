@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove an HTML element using JavaScript</title>
+</head>
+<body>
+    <div id="main">
+        <button onclick="rmoveHTMLElement()">Click Here</button>
+        <p id="para1">This paragraph is going to be removed using JavaScript</p>
+    </div>
+
+    <script>
+        function removeHtmlElement(){
+            var para = document.getElementById('para1');
+            para.remove();
+        }
+    </script>
+</body>
+</html>

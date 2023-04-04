@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>insert Before JavaScript Method</title>
+</head>
+<body>
+    <div id="main">
+        <button onclick="insertElementBefore()">Click Here</button>
+        <p id="para1">This is a Paragraph</p>
+    </div>
+    <script>
+        function insertElementBefore(){
+            var heading = document.createElement('h1');
+            var text = document.createTextNode('Heading From Javascript');
+            heading.appendChild(text);
+
+            var div = document.getElementById('main');
+            var paragraph = document.getElementById('para1');
+
+            div.insertBefore(heading, paragraph);
+        }
+    </script>
+</body>
+</html>

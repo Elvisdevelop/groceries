@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=r, initial-scale=1.0">
+    <title>Create Attributes using JavaScript</title>
+
+    <style>
+        .css{
+            font-size: 60px;
+            color: teal;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <button onclick="createElementAttribute()">Click Here</button>
+        <p id="para1">This is a paragraph for Testing Purpose</p>
+    </div>
+
+    <script>
+        function createElementAttribute(){
+            var para = document.getElementById('para1');
+
+            var attribute = document.createAttribute('class');
+
+            attribute.value = "css";
+
+            para.setAttributeNode(attribute);
+        }
+    </script>
+</body>
+</html>
